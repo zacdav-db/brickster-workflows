@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install unixodbc
+sudo apt-get install unixodbc -y
 
 curl -o \
   /dbfs/tmp/odbc-driver.zip \
@@ -7,7 +7,7 @@ curl -o \
   
 mv /dbfs/tmp/odbc-driver.zip /tmp/
 unzip /tmp/odbc-driver.zip -d /tmp/odbc-simba/
-sudo apt-get install libsasl2-modules-gssapi-mit
+sudo apt-get install libsasl2-modules-gssapi-mit -y
 sudo dpkg -i /tmp/odbc-simba/simbaspark_2.6.19.1033-2_amd64.deb
 
 echo """
